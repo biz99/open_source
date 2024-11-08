@@ -22,7 +22,9 @@ fi
 
 ls -R "$fie"
 
-tar -cvf "$fie/files.tar" "$fie/file0.txt" "$fie/file1.txt" "$fie/file2.txt" "$fie/file3.txt" "$fie/file4.txt"
+mkdir "$fie/files"
+tar -cvf "$fie/files/files.tar" "$fie/file0.txt" "$fie/file1.txt" "$fie/file2.txt" "$fie/file3.txt" "$fie/file4.txt"
 
+tar -xvf "$fie/files/files.tar" -C "$fie"
 exit 0
 
